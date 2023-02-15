@@ -112,7 +112,7 @@ void Log::writeLog
 	// [进程号] [线程号] [文件名] [函数名:行号]
 	wchar_t logInfo[100];
 	swprintf(logInfo, 100,
-             L" [PID : %-5d] [TID : %-5d] [%-ls] [%-ls] [LineNumber : %-4d] ",
+             L" [PID : %-5d] [TID : %-5d] [%-ls] [%-ls : %-4d] ",
              getpid(),
              gettid(),
              _FileName,
