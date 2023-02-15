@@ -55,7 +55,7 @@ int WStrToStr(const wchar_t* _SrcBuf, char* _DstBuf)
 #endif
 
 std::shared_ptr<Log>    Log::m_Log              { nullptr };
-std::wstring            Log::m_wstrLogBuffer    { 0 };
+std::wstring            Log::m_wstrLogBuffer	{ 0 };
 std::wstring            Log::m_wstrLogFile      { L"./Log.txt" };
 LOGLEVEL                Log::m_LogLevel         { LOG_LEVEL_NONE };
 LOGTARGET               Log::m_LogTarget        { LOG_TARGET_NONE };
@@ -76,12 +76,12 @@ void Log::Init(LOGLEVEL _LogLevel, LOGTARGET _LogTarget, std::wstring _Path)
 
 void Log::writeLog
 (
-	const LOGLEVEL _LogLevel,    // Log等级
-	const wchar_t* _FileName,    // 函数所在文件名
-	const wchar_t* _Function,    // 函数名
-	const uint   _LineNumber,    // 行号
-	const char*      _Format,    // 格式化
-	...                          // 参数列表
+	const LOGLEVEL _LogLevel,	// Log等级
+	const wchar_t* _FileName,	// 函数所在文件名
+	const wchar_t* _Function,	// 函数名
+	const uint   _LineNumber,	// 行号
+	const char*      _Format,	// 格式化
+	...							// 参数列表
 )
 {
 	// 写锁
